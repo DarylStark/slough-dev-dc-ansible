@@ -23,6 +23,7 @@ ENV PROMPTNAME="ANSIBLE"
 COPY ./update/ /opt/update-dc/
 
 # Update the system
+# hadolint ignore=DL3004
 RUN sudo /opt/update-dc/000-update-dev-dc.sh
 
 # Set the default command to bash
